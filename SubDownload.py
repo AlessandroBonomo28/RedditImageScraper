@@ -7,7 +7,7 @@ import pickle
 
 from utils.create_token import create_token
 
-POST_SEARCH_AMOUNT = 5
+POST_SEARCH_AMOUNT = 50
 
 # Create directory if it doesn't exist to save images
 def create_folder(image_path):
@@ -41,7 +41,7 @@ reddit = praw.Reddit(client_id=creds['client_id'],
 
 
 f_final = open("sub_list.csv", "r")
-img_notfound = cv2.imread('imageNF.png')
+#img_notfound = cv2.imread('./ignore_images/imageNF.png')
 for line in f_final:
     sub = line.strip()
     subreddit = reddit.subreddit(sub)
